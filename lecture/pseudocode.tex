@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage{amsmath,graphicx}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\begin{document}
+
+\begin{algorithmic}
+    \Function{GetAgentState}{AliveCells, row, column}
+        \State neighborCount $\gets$ 0
+        \For{dr $\in \{-1, 0, 1\}$}
+            \For{dc $\in \{-1, 0, 1\}$}
+                \If{dr = 0 and dc = 0}
+                    \State \textbf{continue}
+                \EndIf
+                \State r $\gets$ row + dr
+                \State c $\gets$ column + dc
+                \If{$(r, c) \in $ AliveCells}
+                    \State neighborCount $\gets$ neighborCount + 1
+                \EndIf
+            \EndFor
+        \EndFor
+
+        \If{neighborCount = 3}
+            \State \Return ALIVE
+        \EndIf
+
+        \If{neighborCount = 2 $\land$ (row, column) $\in$ AliveCells}
+            \State \Return ALIVE
+        \EndIf
+
+        \State \Return DEAD
+    \EndFunction
+\end{algorithmic}
+
+\newpage
+
+\begin{algorithmic}
+    \Function{AStar}{distance, heuristic, neighbours, is\_goal, start}
+        \State O $\gets$ \{start\}
+        \State C $\gets$ \{\}
+        \State G $\gets$ \{start: 0\}
+        \State F $\gets$ \{start: heuristic(start)\}
+        \While{O $\neq \emptyset$}
+            \State x $\gets \argmin_n$ F[n]
+            \If{is\_goal(x)}
+                \State \Return reconstruct\_path(x, C)
+            \EndIf
+            \State O $\gets$ O - \{x\}
+            \For{y $\in$ neighbours(x)}
+                \State g $\gets$ G[x] + distance(x, y)
+                \If{g $<$ G[y]}
+                    \State C[y] $\gets$ x
+                    \State G[y] $\gets$ g
+                    \State F[y] $\gets$ g + heuristic(y)
+                    \State O $\gets$ O $\cup$ \{y\}
+                \EndIf
+            \EndFor
+        \EndWhile
+        \State \Return failure
+    \EndFunction
+\end{algorithmic}
+
+\newpage
+
+\begin{algorithmic}
+    \Function{Maze}{rows, columns}
+        \State $W \gets \{(r, c) ~\forall~ r \in \{1, \ldots, \text{rows}\}, c \in \{1, \ldots, \text{columns}\}\}$
+        \State $F \gets \{(r, c) \in W~|~ r \text{ is even} \land c \text{ is even}\}$
+        \State $W \gets W \setminus F$
+        \State randomShuffle($F$)
+        \For{$(r, c) \in F$}
+            \State $W_t \gets \emptyset$
+            \For{$(r_d, c_d) \in \{(0, 2), (0, -2), (2, 0), (-2, 0)\}$}
+                \State $r_n, c_n \gets r + r_d, c + c_d$
+                \State $r_w, c_w \gets (r + r_n)/2, (c + c_n)/2$
+                \If{$(r_n, c_n) \in F \land (r_w, c_w) \in W$}
+                    \State $W_t \gets W_t \cup \{(r_w, c_w)\}$
+                \EndIf
+            \EndFor
+
+            \State $w \gets \text{randomChoice}(W_t)$
+            \State $W \gets W \setminus \{w\}$
+            \State $F \gets F \cup \{w\}$
+        \EndFor
+
+        \For{$(r, c) \in F$}
+            \State $R \gets \text{getRoom}(r, c)$
+            \If{$R = W$}
+                \State \Return $W, F$
+            \EndIf
+            \State $W_R \gets \text{roomDividers}(R)$
+            \State $w \gets \text{randomChoice}(W_R)$
+            \State $W \gets W \setminus \{w\}$
+            \State $F \gets F \cup \{w\}$
+        \EndFor
+
+        \State \Return $W, F$
+    \EndFunction
+\end{algorithmic}
+
+\end{document}

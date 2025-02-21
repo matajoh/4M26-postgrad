@@ -1,0 +1,61 @@
+{
+    "image_path": "select_screen.png",
+    "select_info": [
+        {
+            "name": "imogen",
+            "color": [
+                39.0,
+                174.0,
+                96.0
+            ],
+            "bb": {
+                "left": 25,
+                "top": 112,
+                "right": 89,
+                "bottom": 192
+            }
+        },
+        {
+            "name": "iggy",
+            "color": [
+                187.0,
+                138.0,
+                89.0
+            ],
+            "bb": {
+                "left": 105,
+                "top": 112,
+                "right": 169,
+                "bottom": 192
+            }
+        },
+        {
+            "name": "james",
+            "color": [
+                99.0,
+                118.0,
+                163.0
+            ],
+            "bb": {
+                "left": 185,
+                "top": 112,
+                "right": 249,
+                "bottom": 192
+            }
+        },
+        {
+            "name": "john",
+            "color": [
+                102.0,
+                102.0,
+                102.0
+            ],
+            "bb": {
+                "left": 265,
+                "top": 112,
+                "right": 329,
+                "bottom": 192
+            }
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+Small color made to some of the sprites to aid in visual clarity.

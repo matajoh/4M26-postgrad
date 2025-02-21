@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name =  "postgrad"
+version = "1.0.0"
+authors = [
+    { name="Matthew Johnson", email="mj293@cam.ac.uk" },
+]
+description = "A PacMan clone about postgrad life"
+dependencies = [
+    "numpy",
+    "pillow",
+    "pygame"
+]
+
+[project.optional-dependencies]
+lecture = [
+    "opencv-python",
+    "matplotlib"
+]
+
+[project.scripts]
+postgrad = "postgrad:main"
+postgrad_level = "postgrad:level_main"
+postgrad_replay = "postgrad:replay_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+postgrad = ["assets/**/*.png", "assets/**/*.json", "assets/**/*.txt"]

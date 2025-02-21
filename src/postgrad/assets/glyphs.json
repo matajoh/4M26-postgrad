@@ -1,0 +1,584 @@
+{
+    "rows": 3,
+    "columns": 32,
+    "image_path": "glyphs.png",
+    "tile_size": 8,
+    "tiles": [
+        {
+            "name": "glyph",
+            "type": " ",
+            "row": 0,
+            "column": 0
+        },
+        {
+            "name": "glyph",
+            "type": "!",
+            "row": 0,
+            "column": 1
+        },
+        {
+            "name": "glyph",
+            "type": "\"",
+            "row": 0,
+            "column": 2
+        },
+        {
+            "name": "glyph",
+            "type": "#",
+            "row": 0,
+            "column": 3
+        },
+        {
+            "name": "glyph",
+            "type": "$",
+            "row": 0,
+            "column": 4
+        },
+        {
+            "name": "glyph",
+            "type": "%",
+            "row": 0,
+            "column": 5
+        },
+        {
+            "name": "glyph",
+            "type": "&",
+            "row": 0,
+            "column": 6
+        },
+        {
+            "name": "glyph",
+            "type": "'",
+            "row": 0,
+            "column": 7
+        },
+        {
+            "name": "glyph",
+            "type": "(",
+            "row": 0,
+            "column": 8
+        },
+        {
+            "name": "glyph",
+            "type": ")",
+            "row": 0,
+            "column": 9
+        },
+        {
+            "name": "glyph",
+            "type": "*",
+            "row": 0,
+            "column": 10
+        },
+        {
+            "name": "glyph",
+            "type": "+",
+            "row": 0,
+            "column": 11
+        },
+        {
+            "name": "glyph",
+            "type": ",",
+            "row": 0,
+            "column": 12
+        },
+        {
+            "name": "glyph",
+            "type": "-",
+            "row": 0,
+            "column": 13
+        },
+        {
+            "name": "glyph",
+            "type": ".",
+            "row": 0,
+            "column": 14
+        },
+        {
+            "name": "glyph",
+            "type": "/",
+            "row": 0,
+            "column": 15
+        },
+        {
+            "name": "glyph",
+            "type": "0",
+            "row": 0,
+            "column": 16
+        },
+        {
+            "name": "glyph",
+            "type": "1",
+            "row": 0,
+            "column": 17
+        },
+        {
+            "name": "glyph",
+            "type": "2",
+            "row": 0,
+            "column": 18
+        },
+        {
+            "name": "glyph",
+            "type": "3",
+            "row": 0,
+            "column": 19
+        },
+        {
+            "name": "glyph",
+            "type": "4",
+            "row": 0,
+            "column": 20
+        },
+        {
+            "name": "glyph",
+            "type": "5",
+            "row": 0,
+            "column": 21
+        },
+        {
+            "name": "glyph",
+            "type": "6",
+            "row": 0,
+            "column": 22
+        },
+        {
+            "name": "glyph",
+            "type": "7",
+            "row": 0,
+            "column": 23
+        },
+        {
+            "name": "glyph",
+            "type": "8",
+            "row": 0,
+            "column": 24
+        },
+        {
+            "name": "glyph",
+            "type": "9",
+            "row": 0,
+            "column": 25
+        },
+        {
+            "name": "glyph",
+            "type": ":",
+            "row": 0,
+            "column": 26
+        },
+        {
+            "name": "glyph",
+            "type": ";",
+            "row": 0,
+            "column": 27
+        },
+        {
+            "name": "glyph",
+            "type": "<",
+            "row": 0,
+            "column": 28
+        },
+        {
+            "name": "glyph",
+            "type": "=",
+            "row": 0,
+            "column": 29
+        },
+        {
+            "name": "glyph",
+            "type": ">",
+            "row": 0,
+            "column": 30
+        },
+        {
+            "name": "glyph",
+            "type": "?",
+            "row": 0,
+            "column": 31
+        },
+        {
+            "name": "glyph",
+            "type": "@",
+            "row": 1,
+            "column": 0
+        },
+        {
+            "name": "glyph",
+            "type": "A",
+            "row": 1,
+            "column": 1
+        },
+        {
+            "name": "glyph",
+            "type": "B",
+            "row": 1,
+            "column": 2
+        },
+        {
+            "name": "glyph",
+            "type": "C",
+            "row": 1,
+            "column": 3
+        },
+        {
+            "name": "glyph",
+            "type": "D",
+            "row": 1,
+            "column": 4
+        },
+        {
+            "name": "glyph",
+            "type": "E",
+            "row": 1,
+            "column": 5
+        },
+        {
+            "name": "glyph",
+            "type": "F",
+            "row": 1,
+            "column": 6
+        },
+        {
+            "name": "glyph",
+            "type": "G",
+            "row": 1,
+            "column": 7
+        },
+        {
+            "name": "glyph",
+            "type": "H",
+            "row": 1,
+            "column": 8
+        },
+        {
+            "name": "glyph",
+            "type": "I",
+            "row": 1,
+            "column": 9
+        },
+        {
+            "name": "glyph",
+            "type": "J",
+            "row": 1,
+            "column": 10
+        },
+        {
+            "name": "glyph",
+            "type": "K",
+            "row": 1,
+            "column": 11
+        },
+        {
+            "name": "glyph",
+            "type": "L",
+            "row": 1,
+            "column": 12
+        },
+        {
+            "name": "glyph",
+            "type": "M",
+            "row": 1,
+            "column": 13
+        },
+        {
+            "name": "glyph",
+            "type": "N",
+            "row": 1,
+            "column": 14
+        },
+        {
+            "name": "glyph",
+            "type": "O",
+            "row": 1,
+            "column": 15
+        },
+        {
+            "name": "glyph",
+            "type": "P",
+            "row": 1,
+            "column": 16
+        },
+        {
+            "name": "glyph",
+            "type": "Q",
+            "row": 1,
+            "column": 17
+        },
+        {
+            "name": "glyph",
+            "type": "R",
+            "row": 1,
+            "column": 18
+        },
+        {
+            "name": "glyph",
+            "type": "S",
+            "row": 1,
+            "column": 19
+        },
+        {
+            "name": "glyph",
+            "type": "T",
+            "row": 1,
+            "column": 20
+        },
+        {
+            "name": "glyph",
+            "type": "U",
+            "row": 1,
+            "column": 21
+        },
+        {
+            "name": "glyph",
+            "type": "V",
+            "row": 1,
+            "column": 22
+        },
+        {
+            "name": "glyph",
+            "type": "W",
+            "row": 1,
+            "column": 23
+        },
+        {
+            "name": "glyph",
+            "type": "X",
+            "row": 1,
+            "column": 24
+        },
+        {
+            "name": "glyph",
+            "type": "Y",
+            "row": 1,
+            "column": 25
+        },
+        {
+            "name": "glyph",
+            "type": "Z",
+            "row": 1,
+            "column": 26
+        },
+        {
+            "name": "glyph",
+            "type": "[",
+            "row": 1,
+            "column": 27
+        },
+        {
+            "name": "glyph",
+            "type": "\\",
+            "row": 1,
+            "column": 28
+        },
+        {
+            "name": "glyph",
+            "type": "]",
+            "row": 1,
+            "column": 29
+        },
+        {
+            "name": "glyph",
+            "type": "^",
+            "row": 1,
+            "column": 30
+        },
+        {
+            "name": "glyph",
+            "type": "_",
+            "row": 1,
+            "column": 31
+        },
+        {
+            "name": "glyph",
+            "type": "\u00a3",
+            "row": 2,
+            "column": 0
+        },
+        {
+            "name": "glyph",
+            "type": "a",
+            "row": 2,
+            "column": 1
+        },
+        {
+            "name": "glyph",
+            "type": "b",
+            "row": 2,
+            "column": 2
+        },
+        {
+            "name": "glyph",
+            "type": "c",
+            "row": 2,
+            "column": 3
+        },
+        {
+            "name": "glyph",
+            "type": "d",
+            "row": 2,
+            "column": 4
+        },
+        {
+            "name": "glyph",
+            "type": "e",
+            "row": 2,
+            "column": 5
+        },
+        {
+            "name": "glyph",
+            "type": "f",
+            "row": 2,
+            "column": 6
+        },
+        {
+            "name": "glyph",
+            "type": "g",
+            "row": 2,
+            "column": 7
+        },
+        {
+            "name": "glyph",
+            "type": "h",
+            "row": 2,
+            "column": 8
+        },
+        {
+            "name": "glyph",
+            "type": "i",
+            "row": 2,
+            "column": 9
+        },
+        {
+            "name": "glyph",
+            "type": "j",
+            "row": 2,
+            "column": 10
+        },
+        {
+            "name": "glyph",
+            "type": "k",
+            "row": 2,
+            "column": 11
+        },
+        {
+            "name": "glyph",
+            "type": "l",
+            "row": 2,
+            "column": 12
+        },
+        {
+            "name": "glyph",
+            "type": "m",
+            "row": 2,
+            "column": 13
+        },
+        {
+            "name": "glyph",
+            "type": "n",
+            "row": 2,
+            "column": 14
+        },
+        {
+            "name": "glyph",
+            "type": "o",
+            "row": 2,
+            "column": 15
+        },
+        {
+            "name": "glyph",
+            "type": "p",
+            "row": 2,
+            "column": 16
+        },
+        {
+            "name": "glyph",
+            "type": "q",
+            "row": 2,
+            "column": 17
+        },
+        {
+            "name": "glyph",
+            "type": "r",
+            "row": 2,
+            "column": 18
+        },
+        {
+            "name": "glyph",
+            "type": "s",
+            "row": 2,
+            "column": 19
+        },
+        {
+            "name": "glyph",
+            "type": "t",
+            "row": 2,
+            "column": 20
+        },
+        {
+            "name": "glyph",
+            "type": "u",
+            "row": 2,
+            "column": 21
+        },
+        {
+            "name": "glyph",
+            "type": "v",
+            "row": 2,
+            "column": 22
+        },
+        {
+            "name": "glyph",
+            "type": "w",
+            "row": 2,
+            "column": 23
+        },
+        {
+            "name": "glyph",
+            "type": "x",
+            "row": 2,
+            "column": 24
+        },
+        {
+            "name": "glyph",
+            "type": "y",
+            "row": 2,
+            "column": 25
+        },
+        {
+            "name": "glyph",
+            "type": "z",
+            "row": 2,
+            "column": 26
+        },
+        {
+            "name": "glyph",
+            "type": "{",
+            "row": 2,
+            "column": 27
+        },
+        {
+            "name": "glyph",
+            "type": "|",
+            "row": 2,
+            "column": 28
+        },
+        {
+            "name": "glyph",
+            "type": "}",
+            "row": 2,
+            "column": 29
+        },
+        {
+            "name": "glyph",
+            "type": "~",
+            "row": 2,
+            "column": 30
+        },
+        {
+            "name": "glyph",
+            "type": "\u00a9",
+            "row": 2,
+            "column": 31
+        }
+    ]
+}

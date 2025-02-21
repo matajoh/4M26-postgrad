@@ -426,3 +426,58 @@ The end result is a maze in which each tile is reachable from every other tile, 
 ![Maze Animation](docs/maze.gif)
 
 In practice, we tailor this algorithm even further to make its support a tighter fit and reduce the rejection rate. For full details, see [this code file](src/postgrad/level_generator.py).
+
+## Replay Files
+
+The `postgrad` script has the following usage information:
+
+    usage: postgrad [-h] [-v] [-f] [-i] [-g] [-s] [-r REPLAY] [-l REPLAY_LENGTH]
+
+    options:
+    -h, --help            show this help message and exit
+    -v, --version         show program's version number and exit
+    -f, --fullscreen      Run the game in fullscreen mode
+    -i, --invulnerable    Make the grad invulnerable
+    -g, --show-goals      Show the goal tiles of the profs
+    -s, --show-state      Show the state of the game
+    -r REPLAY, --replay REPLAY
+                            Path to save the replay
+    -l REPLAY_LENGTH, --replay-length REPLAY_LENGTH
+                            Maximum length of the replay
+
+The `-r` option allows you to specify a directory where the game will write replay files. These files are NPZ archives which contain the following items:
+
+1. `seed` - A random seed
+2. `grad` - The select grad (a value from 0 to 3)
+3. `actions` - a `(N, 2)` array of integers. Each row is the step an action was taken (which is a monotonically increasing value for an entire playthrough) and the action taken, with values taken from the enumeration below.
+
+```python
+class Action(Enum):
+    """These are the actions that a sprite can take.
+
+    Note that these actions can come from player input or from the
+    faculty AI.
+    """
+    NONE = 0
+    MOVE_UP = 1
+    MOVE_DOWN = 2
+    MOVE_LEFT = 3
+    MOVE_RIGHT = 4
+```
+
+The replay can be viewed using the `postgrad_replay` tool:
+
+    usage: postgrad_replay [-h] [-v VIDEO_PATH] [-i] replay_path
+
+    Replay a game
+
+    positional arguments:
+    replay_path           Path to the replay file
+
+    options:
+    -h, --help            show this help message and exit
+    -v VIDEO_PATH, --video_path VIDEO_PATH
+                            Path to the video file
+    -i, --invulnerable    Make the grad invulnerable
+
+You can use this to test whether a replay file you have produced is valid.

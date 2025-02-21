@@ -1,4 +1,4 @@
-"""PostGrad video game.
+"""The PostGrad video game.
 
 These files, in addition with the README, act as lecture notes and a
 revision aid for the Tripos. Some files are not in scope for the Tripos

@@ -23,11 +23,11 @@ On Windows:
 
 You should see the following screen pop up:
 
-![Select Screen](docs/select.gif)
+![Select Screen](images/select.gif)
 
 You can select which grad you want using the <kbd>a</kbd>/<kbd>←</kbd> to move left, and <kbd>d</kbd>/<kbd>→</kbd> to move right. Start by pressing <kbd>w</kbd>/<kbd>↑</kbd>. During play, you can also move down using <kbd>s</kbd>/<kbd>↓</kbd>. Once you start, you should see the following screen:
 
-![Gameplay](docs/gameplay.gif)
+![Gameplay](images/gameplay.gif)
 
 The aim of gameplay is to avoid the professors as long as you can, while gathering all the dots in your search for free food. As you play, think about these questions:
 
@@ -48,7 +48,7 @@ This game is an example of an agent-based model, which is characterised the foll
 
 A classic example of an agent-based model is Conway's Game of Life:
 
-![Conway's Game of Life](docs/conway.gif)
+![Conway's Game of Life](images/conway.gif)
 
 In this model each square is an agent, which acts in the following way:
 
@@ -178,7 +178,7 @@ To learn more about how all of this is implemented, see the following files:
 
 The Professor agents act following simple rules that are enabled via a classical form of AI. The behaviour falls into two general categories: scattering, and chasing. When scattering, they take on the following movement pattern:
 
-![Scatter](docs/scatter.png)
+![Scatter](images/scatter.png)
 
 When chasing, however, each professor has their own goals they try to achieve.
 
@@ -186,7 +186,7 @@ When chasing, however, each professor has their own goals they try to achieve.
 
 Professor Blink goes right for the grad student by the shortest possible path.
 
-![Blink Goal](docs/blink_goal.png)
+![Blink Goal](images/blink_goal.png)
 
 In code, the per-phase goals look like this:
 
@@ -210,7 +210,7 @@ def blink(level: Level, phase: ProfessorState, info: GameInfo) -> Vec2:
 
 Professor Pink is always aiming for the spot right in front of the grad student:
 
-![Pink Goal](docs/pink_goal.png)
+![Pink Goal](images/pink_goal.png)
 
 
 ```python
@@ -233,7 +233,7 @@ def pink(level: Level, phase: ProfessorState, info: GameInfo) -> Vec2:
 
 Professor Ink has a complex goal which is governed both by the location of the grad student and Professor Blink. See the diagram below:
 
-![Ink Goal](docs/ink_goal.png)
+![Ink Goal](images/ink_goal.png)
 
 The goal is a function of the space in front of the grad student combined with the directional vector of Professor Blink's location in relation tot hat space.  In code:
 
@@ -258,7 +258,7 @@ def ink(level: Level, phase: ProfessorState, info: GameInfo) -> Vec2:
 
 Professor Sue has the same logic as Professor Blink, except once she is within 4 tiles of the grad student she reverts to her scatter behaviour:
 
-![Sue Goal](docs/sue_goal.png)
+![Sue Goal](images/sue_goal.png)
 
 The points marked with an `x` are where her movement goals change due to proximity.  In code:
 
@@ -285,17 +285,17 @@ def sue(level: Level, phase: ProfessorState, info: GameInfo) -> Vec2:
 
 Once a professor's goal has been established, they determine which next step to take by using an algorithm called A* search. This performs a search over the high-level graph structure of the map:
 
-![Level Graph](docs/level_graph.png)
+![Level Graph](images/level_graph.png)
 
 Each tile is represented here by a red square (denoting a node in teh graph), and the edges between nodes are represented with green lines. The blue lines on the edges of the level indicate the fact that the right-most tile is the left-most neighbour of the left-most tile (and vice versa).
 
 The A* algorithm looks like this:
 
-![astar_alg](docs/astar_alg.png)
+![astar_alg](images/astar_alg.png)
 
 Here is the algorithm in action:
 
-![astar animation](docs/astar.gif)
+![astar animation](images/astar.gif)
 
 Here is an implementation in Python:
 
@@ -392,11 +392,11 @@ L......F234F......R
 
 Which correspond to a level like this:
 
-![Default level](docs/default_level.png)
+![Default level](images/default_level.png)
 
 This is a form of rejection sampling. Let's say we wanted to create the following endearingly nerdy St. Valentine's card:
 
-![Heart](docs/heart_card.png)
+![Heart](images/heart_card.png)
 
 In short, we want to sample from a uniform distribution shaped like a heart. This forms our target distribution $X$, and we can use a shape mask to accept or reject samples. The samples themselves are drawn from a proposal distribution, $Y$, in this case the 2D uniform distribution. As long as the support of $X$ is subsumed within the support of $Y$ (obvious here from inspection), this strategy works provided we reject all the invalid samples (black here).
 
@@ -413,7 +413,7 @@ However, the choice of $Y$ is less clear. We could sample all text files with th
 
 Consider the following algorithm for generating a maze:
 
-![Maze Algorithm](docs/maze_alg.png)
+![Maze Algorithm](images/maze_alg.png)
 
 It has three steps:
 
@@ -423,7 +423,7 @@ It has three steps:
 
 The end result is a maze in which each tile is reachable from every other tile, as we can see in this animation:
 
-![Maze Animation](docs/maze.gif)
+![Maze Animation](images/maze.gif)
 
 In practice, we tailor this algorithm even further to make its support a tighter fit and reduce the rejection rate. For full details, see [this code file](src/postgrad/level_generator.py).
 
